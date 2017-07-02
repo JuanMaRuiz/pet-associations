@@ -1,0 +1,32 @@
+{
+  "name": "pet-associations",
+  "version": "0.0.1",
+  "description": "API create with node and express which serve Spain pet associations",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanMaRuiz/pet-associations.git"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "express",
+    "mocha"
+  ],
+  "author": "JuanMa Ruiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanMaRuiz/pet-associations/issues"
+  },
+  "homepage": "https://github.com/JuanMaRuiz/pet-associations#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongoose": "^4.11.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2"
+  }
+}
