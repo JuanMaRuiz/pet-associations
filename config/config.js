@@ -2,7 +2,7 @@
 
 const userDDBB = {
 	"user": "admin",
-	"pass": "Ju4nm417"
+	"pass": "Ju4nm407"
 };
 
 const server = {
