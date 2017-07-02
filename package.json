@@ -28,6 +28,8 @@
     "morgan": "^1.8.2"
   },
   "devDependencies": {
+    "grunt-contrib-eslint": "0.0.5",
+    "jit-grunt": "^0.10.0",
     "mocha": "^3.4.2"
   }
 }
