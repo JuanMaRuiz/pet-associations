@@ -29,6 +29,13 @@
     "morgan": "^1.8.2"
   },
   "devDependencies": {
+    "eslint": "^4.1.1",
+    "eslint-config-google": "^0.8.0",
+    "eslint-tap": "^2.0.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-eslint": "0.0.5",
+    "grunt-eslint": "^20.0.0",
+    "jit-grunt": "^0.10.0",
     "mocha": "^3.4.2"
   }
 }
