@@ -11,4 +11,4 @@ let associationsSchema = new Schema({
 	"social-networks": Array
 });
 
-module.exports = mongoose.model('Associations', associationsSchema);
+const Associations = mongoose.model('Associations', associationsSchema);
