@@ -1,5 +1,7 @@
 'use strict';
 
+const welcomeMsg = 'Bazinga!! You did it! You now are connected to our fancy API'
+
 const userDDBB = {
 	"user": "admin",
 	"pass": "******"
@@ -10,14 +12,10 @@ const server = {
 	host: process.env.HOST || 'localhost'
 };
 
-const dbURI = generateDBConnection.call(this, userDDBB.user, userDDBB.pass)
-
-function generateDBConnection(user, pass) {
-  // return "mongodb://" + user + ":" + pass + "@ds147052.mlab.com:47052/animal-protection";
-	return "mongodb://127.0.0.1:27017/associations";
-}
+const dbURI = "mongodb://127.0.0.1:27017";
 
 module.exports = {
-	dbURI: dbURI,
-	server: server
+	dbURI,
+	server,
+  welcomeMsg
 };

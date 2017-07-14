@@ -13,7 +13,7 @@ const associations = require('./associations/associatons-model');
 const associationsCtrl = require('./associations/associations-controller');
 
 // DB connection
-mongoose.connect('mongodb://127.0.0.1:27017');
+mongoose.connect(config.dbURI);
 
 db.on('error', console.error.bind(console, 'Connection error'));
 db.once('open', function() {
@@ -27,18 +27,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // TODO
 // Here you should load express routes instead of set all the routes in this file
 
-app.get('/', function(req, res) {
-	res.send('Bazinga!!!!');
+app.get('/api', function(req, res) {
+	res.send(config.welcomeMsg);
 });
 
-app.get('/associations', associationsCtrl.getAllAssociations);
+app.get('/api/associations', associationsCtrl.getAllAssociations);
 
-app.get('/associations/:associationId', associationsCtrl.getAssociationById);
+app.get('/api/associations/:associationId', associationsCtrl.getAssociationById);
 
-let server = app.listen(config.server, function() {
+app.listen(config.server, function() {
   // console.log('server address: ', server.address().address);
   // console.log('server port: ', server.address().port);
 	console.log(`App running in http://${config.server.host}:${config.server.port}`);
 });
 
-module.exports = server;
+module.exports = app; // app needs to be exported for testing purposes

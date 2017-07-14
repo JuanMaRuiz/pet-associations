@@ -7,16 +7,17 @@ const expect = chai.expect;
 chai.use(chaiHttp);
 
 // App modules
-const server = require('./../server');
+const app = require('./../server');
 const associations = require('./../associations/associations-controller');
 
-describe('Associations Controller', function() {
+describe('Associations Controller', function(done) {
   it('/GET should get all the associations from database', function() {
-    chai.request(server)
+    chai.request(app)
       .get('/associations')
       .end(function(err, res) {
-        console.log('response: ', res);
-        done();
+        //expect(res).to.have.status(200);
+        expect(res.body.length).to.equal(444);
+        done();                               // <= Call done to signal callback end
       });
 
   });
