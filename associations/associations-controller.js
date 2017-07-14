@@ -11,7 +11,6 @@ module.exports.getAllAssociations = function(req, res) {
 };
 
 module.exports.getAssociationById = function(req, res) {
-  console.log('req.params.associationId: ', req.params.associationId);
   Associations.findById(req.params.associationId, function(err, association) {
     if(err) res.send(err);
     res.json(association);

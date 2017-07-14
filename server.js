@@ -35,6 +35,10 @@ app.get('/associations', associationsCtrl.getAllAssociations);
 
 app.get('/associations/:associationId', associationsCtrl.getAssociationById);
 
-app.listen(config.server, function() {
+let server = app.listen(config.server, function() {
+  // console.log('server address: ', server.address().address);
+  // console.log('server port: ', server.address().port);
 	console.log(`App running in http://${config.server.host}:${config.server.port}`);
 });
+
+module.exports = server;
